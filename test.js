@@ -4,6 +4,8 @@ const preset = require('.');
 
 
 const component = `
+import{createElement}from"@bikeshaving/crank";
+
 function Greeting({name="World"}) {
   return (
     <div>Hello {name}</div>

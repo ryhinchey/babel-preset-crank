@@ -13,8 +13,7 @@
   "author": "Ryan Hinchey <rlhinchey@gmail.com> (http://twitter.com/ryhinchey)",
   "license": "MIT",
   "dependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.9.4",
-    "babel-plugin-jsx-pragmatic": "^1.0.2"
+    "@babel/plugin-transform-react-jsx": "^7.9.4"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
