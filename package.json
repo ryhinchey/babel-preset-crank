@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-crank",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Babel preset to transform JSX into Crank createElement() calls.",
   "main": "index.js",
   "scripts": {
