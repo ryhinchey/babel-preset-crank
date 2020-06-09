@@ -3,7 +3,7 @@ const babel = require('@babel/core');
 const preset = require('.');
 
 
-const component = `
+const componentWithImport = `
 import{createElement}from"@bikeshaving/crank";
 
 function Greeting({name="World"}) {
@@ -13,7 +13,7 @@ function Greeting({name="World"}) {
 }
 `
 
-const { code } = babel.transformSync(component, {
+const { code: codeWithImport } = babel.transformSync(componentWithImport, {
 	presets: [
 		preset
 	],
@@ -22,6 +22,27 @@ const { code } = babel.transformSync(component, {
 });
 
 assert.equal(
-  code, 
+  codeWithImport, 
+  'import{createElement}from"@bikeshaving/crank";function Greeting({name="World"}){return createElement("div",null,"Hello ",name);}'
+);
+
+const componentWithoutImport = `
+function Greeting({name="World"}) {
+  return (
+    <div>Hello {name}</div>
+  );
+}
+`
+
+const { code: codeWithoutImport } = babel.transformSync(componentWithoutImport, {
+	presets: [
+		preset
+	],
+	babelrc: false,
+	compact: true
+});
+
+assert.equal(
+  codeWithoutImport, 
   'import{createElement}from"@bikeshaving/crank";function Greeting({name="World"}){return createElement("div",null,"Hello ",name);}'
 );

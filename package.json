@@ -12,6 +12,10 @@
   "keywords": [],
   "author": "Ryan Hinchey <rlhinchey@gmail.com> (http://twitter.com/ryhinchey)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryhinchey/babel-preset-crank"
+  },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.9.4"
   },
